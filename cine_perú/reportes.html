@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Reportes | CinePerú</title>
+</head>
+<body>
+    <header class="nav">
+        <div class="encabezado">
+            <img class="imglogo" src="../logo/Logo CinePeru.png" alt="CinePerú">
+            <nav>
+                <a href="admin.html">Registro</a>
+                <a href="reportes.html" class="active">Reportes</a>
+            </nav>
+            <button class="btn2" onclick="logout()">Cerrar sesión</button>
+        </div>
+    </header>
+    <main class="report-main">
+        <section class="page-header report-header">
+            <div>
+                <h1>Reportes Operativos</h1>
+                <p>Visualización en tiempo real del rendimiento del catálogo y distribución demográfica de géneros para la plataforma CinePerú.</p>
+            </div>
+        </section>
+
+        <section class="report-grid">
+            <article class="report-card">
+                <div class="card-head">
+                    <div>
+                        <h3>Películas Más Vistas</h3>
+                        <p>Top 5 títulos por volumen de reproducción (K-unidades)</p>
+                    </div>
+                    <span class="chart-icon" aria-hidden="true">▥</span>
+                </div>
+                <div class="report-filter">
+                    <label for="periodo">Mostrar por:</label>
+                    <select id="periodo">
+                        <option value="semanal">Semana</option>
+                        <option value="mensual" selected>Mes</option>
+                        <option value="anual">Año</option>
+                    </select>
+                </div>
+                <div id="bar-chart" class="bar-chart"></div>
+                <span class="period-badge"><i></i> Período: <b id="periodo-texto">Mensual</b></span>
+            </article>
+
+            <article class="report-card">
+                <div class="card-head">
+                    <div>
+                        <h3>Catálogo por Género</h3>
+                        <p>Distribución porcentual de títulos activos</p>
+                    </div>
+                    <span class="chart-icon" aria-hidden="true">◷</span>
+                </div>
+                <div class="donut-box">
+                    <div id="donut-chart" class="donut-chart"></div>
+                    <div class="donut-center">
+                        <span>100%</span>
+                        <small>Total títulos</small>
+                    </div>
+                </div>
+                <div id="genre-legend" class="report-legend"></div>
+            </article>
+        </section>
+
+        <footer class="report-footer">
+            <p>© 2024 CinePerú. Sistema de Gestión Administrativa.</p>
+        </footer>
+    </main>
+
+    <script src="../js/reportes.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinePerú</title>
+    <link rel="icon" href="../logo/Logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="nav">
+        <div class="encabezado">
+            <img class="imglogo" src="../logo/Logo CinePeru.png">
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="peliculas.html">Películas</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="nosotros.html">Nosotros</a>
+            </nav>
+            <div class="nav-usuario">
+
+    <a href="carrito.html" class="carrito-link">
+
+        <i class="fa-solid fa-cart-shopping"></i>
+
+        <span class="carrito-badge">
+            0
+        </span>
+
+    </a>
+
+
+    <a href="login.html" class="btn-signout">
+
+        <i class="fa-solid fa-user"></i>
+
+        Sign in
+
+    </a>
+
+</div>
+
+        </div>
+    </header>
+
+    <section class="page-header">
+        <h1>Tu <span>Carrito</span> de Compras</h1>
+        <p id="contador-peliculas">Tienes 0 películas en tu lista</p>
+    </section>
+
+    <section>
+        <a href="peliculas.html">← Seguir explorando</a>
+        <div class="tabla-carrito">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Póster</th>
+                        <th>Película</th>
+                        <th>Género</th>
+                        <th>Cantidad</th>
+                        <th>Precio Unit.</th>
+                        <th>Subtotal</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="carrito-body">
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <h2>Resumen del Pedido</h2>
+            <div>
+                <span class="label">Subtotal</span>
+                <span class="valor resumen-subtotal">S/. 0.00</span>
+            </div>
+            <div>
+                <span class="label">Descuento</span>
+                <span class="valor resumen-descuento">S/. 0.00</span>
+            </div>
+            <div>
+                <span>Total a Pagar</span>
+                <span class="resumen-total">S/. 0.00</span>
+            </div>
+
+            <div>
+                <label for="promocion">¿Tienes algún beneficio o promoción?</label>
+                <select id="promocion">
+                    <option value="0">-- Sin promoción --</option>
+                    <option value="15">15% - Fiestas Patrias</option>
+                    <option value="10">10% - Miembros</option>
+                </select>
+            </div>
+            <button onclick="confirmarCompra()">CONFIRMAR COMPRA</button>
+        </div>
+    </section>
+
+    <footer class="foot">
+        <p>© 2026 CinePerú</p>
+
+        <div class="empresas-logos">
+            <a href="https://peru.cinecolorgroup.com/" target="_blank"><img
+                    src="../img/imagenes para empresas asociadas/CineColor.png" alt="CineColor"></a>
+            <a href="https://www.coca-cola.com/pe/es" target="_blank"><img
+                    src="../img/imagenes para empresas asociadas/CocaCola.png" alt="Coca-Cola"></a>
+            <a href="https://www.fritolay.com/" target="_blank"><img
+                    src="../img/imagenes para empresas asociadas/FritoLay.png" alt="Frito Lay"></a>
+        </div>
+
+        <div>
+            <p>Síguenos en:</p>
+            <div class="redes">
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+
+                <a href="https://www.instagram.com" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+
+                <a href="https://www.youtube.com" target="_blank">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a>
+
+                <a href="mailto:contacto@cineperu.com">
+                    <i class="fas fa-envelope"></i> contacto@cineperu.com
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/datos.js"></script>
+    <script src="../js/carrito.js"></script>
+</body>
+
+</html>

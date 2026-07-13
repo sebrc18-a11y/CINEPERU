@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Administrador</title>
+</head>
+
+<body>
+
+    <header class="nav">
+        <div class="encabezado">
+            <img class="imglogo" src="../logo/Logo CinePeru.png" alt="CinePerú">
+            <nav>
+                <a href="admin.html" class="active">Registro</a>
+                <a href="reportes.html">Reportes</a>
+            </nav>
+            <button class="btn2" onclick="logout()">Cerrar sesion</button>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="cont-mensaje">
+            <h2 id="mensaje-bienvenida"></h2>
+        </div>
+        <div class="cont-crud">
+            <div class="registro" id="crud">
+                <h3>Registrar Nueva Pelicula</h3>
+                <p>Ingrese todos los datos de la nueva pelicula para el catalogo.</p>
+                <div class="sub-registro1">
+                    <label>Titulo de la pelicula</label>
+                    <input type="text" id="nombre-peli" placeholder="Ej. El resplandor">
+                    <label>Genero</label>
+                    <select id="categoria" name="categoria">
+                        <option value="">Seleccione una opción</option>
+                        <option value="Acción">Acción</option>
+                        <option value="Terror">Terror</option>
+                        <option value="Comedia">Comedia</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Animación">Animación</option>
+                        <option value="Fantasia">Fantasia</option>
+                        <option value="Suspenso">Suspenso</option>
+                        <option value="Romantica">Romantica</option>
+                    </select>
+                    <label>Clasificacion</label>
+                    <input type="text" id="clasificacion" placeholder="YYYY">
+                    <label>Duracion (Minutos)</label>
+                    <input type="text" id="time-duracion" placeholder="xH xMIN">
+                </div>
+                <label>Subir poster (Imagen)</label>
+                <input class="entrada" type="file" id="imagen" accept="image/*">
+                <img id="preview-imagen" src="" alt="Vista previa" width="150">
+                <label>Sinopsis:</label>
+                <textarea rows="5" cols="50" placeholder="Breve descripcion de la trama." id="caja-sinopsis">
+            </textarea>
+                <div class="sub-registro2">
+                    <button onclick="limpiar()">Cancelar</button>
+                    <button onclick="registrarPelicula()">Guardar Pelicula</button>
+                </div>
+            </div>
+
+            <div class="vista-peliculas" id="lista-peliculas">
+                <div class="sub-barra">
+                    <h3>Peliculas Existentes</h3>
+                    <p id="msg-total">Total: </p>
+                </div>
+                <div>
+                    <input class="entrada2" type="text" id="busqueda2" onkeyup="filtrarLista()" placeholder="buscar...">
+                    <ul id="listaDinamica"></ul>
+                </div>
+
+                <div class="columnas">
+                    <p>Titulo</p>
+                    <p>Genero</p>
+                    <p>Duracion</p>
+                    <p>Clasificacion</p>
+                    <p>Acciones</p>
+                </div>
+                <div class="contenedor-pelis" id="contenedor-pelis">
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="../js/datos.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+
+</html>
